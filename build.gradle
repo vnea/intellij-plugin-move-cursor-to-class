@@ -27,6 +27,9 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
+      <h3>1.0.0</h3>
+      <ul>
+        <li><b>NEW</b>: Add action <b>Move Cursor to Class</b> to to move the cursor to the class/interface in a Java file.</li>
+      <ul/>
+      """
 }
