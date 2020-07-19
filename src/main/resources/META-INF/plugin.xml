@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.vnea.intellij.plugin.move-cursor-to-class</id>
+    <name>Move Cursor to Class</name>
+    <vendor url="https://github.com/vnea">vnea</vendor>
+
+    <description><![CDATA[
+        <p><b>This plugin allows to move the cursor to the class/interface in a Java file.</b></p>
+        <br>
+        <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-move-cursor-to-class/master/doc/img/plugin_demo.gif" alt="plugin_demo">
+        <br/>
+        <br/>
+        <p>It is possible to bind a shortcut:</p>
+        <br>
+        <img src="https://raw.githubusercontent.com/vnea/intellij-plugin-move-cursor-to-class/master/doc/img/plugin_shorcuts.png" alt="plugin_shortcuts">
+        ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.vnea.intellij.plugin.movecursortoclass.action.MoveCursorToClassAction"
+                class="com.vnea.intellij.plugin.movecursortoclass.action.MoveCursorToClassAction"
+                text="Move Cursor to Class/Interface"/>
+    </actions>
+
+    <depends>com.intellij.java</depends>
+</idea-plugin>
