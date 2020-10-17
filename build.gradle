@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.vnea.intellij.plugin'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.1.3'
+    version '2020.2.3'
     plugins 'java'
 }
 compileKotlin {
@@ -27,9 +27,9 @@ compileTestKotlin {
 }
 patchPluginXml {
     changeNotes """
-      <h3>1.0.0</h3>
+      <h3>1.0.1</h3>
       <ul>
-        <li><b>NEW</b>: Add action <b>Move Cursor to Class</b> to to move the cursor to the class/interface in a Java file.</li>
+        <li><b>NEW</b>: Make plugin compatible until IntelliJ IDEA 2020.2.3.</li>
       <ul/>
       """
 }
