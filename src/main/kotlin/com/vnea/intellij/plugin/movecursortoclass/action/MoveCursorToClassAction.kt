@@ -13,7 +13,7 @@ class MoveCursorToClassAction : AnAction() {
         val editor = e.getData(CommonDataKeys.EDITOR)
         val psiFile = e.getData(CommonDataKeys.PSI_FILE)
 
-        e.presentation.isEnabled = project != null && editor != null && psiFile != null && psiFile is PsiJavaFileImpl;
+        e.presentation.isEnabled = project != null && editor != null && psiFile != null && psiFile is PsiJavaFileImpl
     }
 
     override fun actionPerformed(e: AnActionEvent) {
