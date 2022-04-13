@@ -1,14 +1,18 @@
 plugins {
     id 'java'
     id "org.jetbrains.kotlin.jvm" version "1.5.31"
-    id "org.jetbrains.intellij" version "1.1.6"
+    id "org.jetbrains.intellij" version "1.5.2"
 }
 
 apply plugin: "kotlin"
 apply plugin: "org.jetbrains.intellij"
 
+
+def intellijVersion = '2022.1'
+def pluginVersion = '1.0.6'
+
 group 'com.vnea.intellij.plugin'
-version '1.0.5'
+version pluginVersion
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -30,16 +34,16 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = '2021.3'
+    version = intellijVersion
     plugins = ['java']
 }
 
 patchPluginXml {
     changeNotes.set(provider {
         """
-      <h3>1.0.5</h3>
+      <h3>${pluginVersion}</h3>
       <ul>
-        <li><b>NEW</b>: Make plugin compatible until IntelliJ IDEA 2021.3.x.</li>
+        <li><b>NEW</b>: Make plugin compatible until IntelliJ IDEA ${intellijVersion}.x.</li>
       <ul/>
       """
     })
