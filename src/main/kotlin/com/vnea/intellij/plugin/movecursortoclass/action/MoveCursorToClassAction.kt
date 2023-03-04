@@ -1,5 +1,6 @@
 package com.vnea.intellij.plugin.movecursortoclass.action
 
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -31,5 +32,9 @@ class MoveCursorToClassAction : AnAction() {
             IdeDocumentHistory.getInstance(project).includeCurrentCommandAsNavigation()
         }
 
+    }
+
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
     }
 }
